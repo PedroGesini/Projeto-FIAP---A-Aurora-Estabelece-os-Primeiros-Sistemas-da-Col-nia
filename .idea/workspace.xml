@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcffd853-f883-4fdb-b60c-331360ee0601" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/PythonProject3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gemini_Generated_Image_f9qxoof9qxoof9qx(1).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/balanceamento_energetico.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/banco_dados_projeto.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grafico_previsão_eolica.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/regressao.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tabela_relatorio_sistema.py" afterDir="false" />
-    </list>
+    <list default="true" id="dcffd853-f883-4fdb-b60c-331360ee0601" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,27 +36,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.balanceamento_energetico.executor&quot;: &quot;Run&quot;,
-    &quot;Python.banco_dados_projeto.executor&quot;: &quot;Run&quot;,
-    &quot;Python.grafico_previsão_eolica.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.projeto_estrutura.executor&quot;: &quot;Run&quot;,
-    &quot;Python.regressao.executor&quot;: &quot;Run&quot;,
-    &quot;Python.relatorio_sistema.executor&quot;: &quot;Run&quot;,
-    &quot;Python.tabela_relatorio_sistema.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Info Mania/PycharmProjects/PythonProject3&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.balanceamento_energetico.executor": "Run",
+    "Python.banco_dados_projeto.executor": "Run",
+    "Python.grafico_previsão_eolica.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.projeto_estrutura.executor": "Run",
+    "Python.regressao.executor": "Run",
+    "Python.relatorio_sistema.executor": "Run",
+    "Python.tabela_relatorio_sistema.executor": "Run",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "C:/Users/Info Mania/PycharmProjects/PythonProject3",
+    "to.speed.mode.migration.done": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Info Mania\PycharmProjects\PythonProject3" />
