@@ -190,15 +190,6 @@ Projeto desenvolvido como atividade acadêmica da FIAP, integrando conceitos de:
 * sistemas inteligentes.
 
 
-# Possíveis Melhorias Futuras
-
-* integração com banco de dados real;
-* sistema de alertas em tempo real;
-* dashboard web interativo;
-* inteligência artificial para tomada de decisão;
-* monitoramento via API;
-* sistema completo de telemetria espacial.
-
 Licença
 
 Projeto desenvolvido para fins acadêmicos e educacionais.
