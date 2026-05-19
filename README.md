@@ -1,91 +1,109 @@
-🚀 Sistema Inteligente da Colônia Aurora
+Sistema Inteligente da Colônia Aurora
 
-Projeto acadêmico desenvolvido em Python para simulação inteligente de uma colônia em Marte, utilizando análise energética, lógica de decisão, regressão linear e visualização gráfica.
+Projeto acadêmico desenvolvido em Python com foco em automação, análise energética e tomada de decisão inteligente em uma colônia espacial simulada em Marte.
 
-📚 Sobre o Projeto
-
-O sistema representa o funcionamento inteligente da **Colônia Aurora**, realizando:
-
-* Monitoramento energético da colônia
-* Controle de consumo dos módulos
-* Análise automática de risco energético
-* Desligamento inteligente de módulos não essenciais
-* Previsão de geração de energia eólica
-* Visualização gráfica dos dados
-* Organização hierárquica dos sistemas da colônia
+O sistema integra monitoramento energético, previsão de geração eólica, controle inteligente dos módulos da colônia e análise automática de risco operacional.
 
 
-🧠 Funcionalidades
+Visão Geral
 
-✅ Estruturação de Dados
+A proposta do projeto é representar o funcionamento de uma colônia autônoma em Marte, capaz de monitorar seus recursos energéticos e tomar decisões automaticamente para garantir estabilidade e sobrevivência dos módulos essenciais.
 
-O sistema utiliza:
+Durante a execução, o sistema realiza:
 
-* dicionários hierárquicos
-* listas
-* estruturas organizadas por módulos
+* análise do consumo energético;
+* monitoramento climático;
+* previsão de energia eólica;
+* desligamento inteligente de módulos;
+* geração de relatórios;
+* visualização gráfica dos dados da colônia.
 
-Exemplo:
+O projeto foi estruturado utilizando conceitos fundamentais de programação, organização hierárquica de dados e modelagem preditiva.
 
-* energia e clima
-* suporte à vida
-* laboratório científico
-* alojamento
 
-✅ Lógica de Decisão
+Principais Funcionalidades
 
-O sistema analisa automaticamente:
+Gerenciamento Energético Inteligente
 
-* geração energética
-* consumo total
-* prioridade dos módulos
+O sistema compara automaticamente:
+
+* geração total de energia;
+* consumo total da colônia;
+* prioridade dos módulos.
+
+Caso o consumo ultrapasse a geração disponível, módulos secundários são desligados automaticamente para preservar os sistemas críticos.
 
 Exemplo:
 
- Se o consumo for maior que a geração:
-
-  * módulos menos importantes são desligados
-  * suporte à vida é priorizado
-
-
-✅ Modelagem e Previsão
-
-Foi implementada regressão linear para prever:
-
-* geração futura de energia eólica
-* comportamento energético baseado no vento
-
-Biblioteca utilizada:
-
-* Scikit-Learn
-
-✅ Visualização Gráfica
-
-O projeto utiliza:
-
-* Matplotlib
-* gráficos personalizados
-* visual futurista da colônia
+* alojamento pode ser desativado;
+* laboratório científico pode entrar em modo OFF;
+* suporte à vida permanece ativo como prioridade máxima.
 
 
-# 🗂️ Estrutura do Projeto
+Previsão de Energia Eólica
 
-```text
+Utilizando regressão linear com Scikit-Learn, o sistema estima a geração futura de energia baseada na velocidade atual do vento.
+
+Exemplo:
+
+| Vento Atual | Energia Prevista |
+| ----------- | ---------------- |
+| 8 km/h      | 20 kW            |
+| 12 km/h     | 30 kW            |
+| 16 km/h     | 40 kW            |
+
+Visualização Gráfica
+
+O projeto utiliza gráficos personalizados com Matplotlib para representar:
+
+* produção energética;
+* previsão eólica;
+* níveis de bateria;
+* comportamento energético da colônia.
+
+Os gráficos possuem identidade visual inspirada em sistemas futuristas e monitoramento espacial.
+
+
+
+Organização Hierárquica de Dados
+
+A estrutura da colônia foi organizada utilizando:
+
+* dicionários;
+* listas;
+* módulos hierárquicos;
+* estruturas separadas por setores.
+
+Exemplo da arquitetura:
+
+```python
+estado_colonia = {
+    "energia_clima": {},
+    "suporte_vida": {},
+    "laboratorio_cientifico": {},
+    "alojamento": {}
+}
+```
+
+---
+
+# Estrutura do Projeto
+
+```bash
 Projeto-FIAP-Colonia-Aurora/
 │
 ├── main.py
-├── dados_colonia.py
-├── banco_dados_projeto.py
-├── tabela_relatorio_sistema.py
 ├── balanceamento_energetico.py
+├── banco_dados_projeto.py
 ├── regressao.py
-├── grafico_previsao_eolica.py
+├── grafico_previsão_eolica.py
+├── tabela_relatorio_sistema.py
 │
 ├── README.md
 └── requirements.txt
 ```
 
-⚙️ Tecnologias Utilizadas
+Tecnologias Utilizadas
 
 * Python
 * Matplotlib
@@ -93,10 +111,11 @@ Projeto-FIAP-Colonia-Aurora/
 * Scikit-Learn
 * Tabulate
 
+---
 
-▶️ Como Executar
+Execução do Projeto
 
- 1. Clone o repositório
+Clonar o Repositório
 
 ```bash
 git clone https://github.com/PedroGesini/Projeto-FIAP---A-Aurora-Estabelece-os-Primeiros-Sistemas-da-Col-nia.git
@@ -104,62 +123,82 @@ git clone https://github.com/PedroGesini/Projeto-FIAP---A-Aurora-Estabelece-os-P
 
 ---
 
-2. Entre na pasta
+Entrar na Pasta do Projeto
 
 ```bash
 cd Projeto-FIAP---A-Aurora-Estabelece-os-Primeiros-Sistemas-da-Col-nia
 ```
 
 
-3. Instale as dependências
+Instalar as Dependências
 
 ```bash
 pip install -r requirements.txt
 ```
 
-4. Execute o projeto
+Executar o Sistema
 
 ```bash
 python main.py
 ```
 
-📊 Exemplo de Funcionalidades
+---
 
-## Sistema de Balanceamento Energético
+Simulação do Sistema
 
-Entrada:
+Cenário Energético
 
-```text
-Energia total = 40 kW
-Consumo = 70 kW
+Entrada
+
+```python
+Energia Total = 40 kW
+Consumo Total = 70 kW
 ```
 
-Saída:
+Resultado
 
-```text
-ALERTA: consumo maior que geração
-Módulo de alojamento desligado
+```python
+ALERTA ENERGÉTICO
+Consumo superior à geração disponível.
+
+→ Módulo de alojamento desligado.
+→ Sistema de suporte à vida preservado.
 ```
 
-Previsão Eólica
+---
 
-Entrada:
+Objetivos do Projeto
 
-```text
-Vento atual = 11 km/h
-```
+Este projeto foi desenvolvido com o objetivo de:
 
-Saída prevista:
+* aplicar conceitos de programação em Python;
+* praticar estruturação hierárquica de dados;
+* desenvolver lógica computacional;
+* criar sistemas automatizados de decisão;
+* implementar modelagem preditiva;
+* simular ambientes inteligentes e autônomos.
 
-```text
-≈ 27 kW
-```
+
+Desenvolvimento
+
+Projeto desenvolvido como atividade acadêmica da FIAP, integrando conceitos de:
+
+* lógica de programação;
+* automação;
+* análise de dados;
+* inteligência computacional;
+* sistemas inteligentes.
 
 
-🎯 Objetivos do Projeto
+# Possíveis Melhorias Futuras
 
-* Aplicar conceitos de programação
-* Estruturar dados de forma eficiente
-* Automatizar decisões
-* Criar sistemas preditivos
-* Simular ambientes inteligentes
+* integração com banco de dados real;
+* sistema de alertas em tempo real;
+* dashboard web interativo;
+* inteligência artificial para tomada de decisão;
+* monitoramento via API;
+* sistema completo de telemetria espacial.
+
+Licença
+
+Projeto desenvolvido para fins acadêmicos e educacionais.
