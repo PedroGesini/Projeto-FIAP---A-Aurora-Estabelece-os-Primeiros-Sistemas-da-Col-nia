@@ -1,11 +1,13 @@
-Sistema Inteligente da Colônia Aurora
+````markdown
+# Sistema Inteligente da Colônia Aurora
 
 Projeto acadêmico desenvolvido em Python com foco em automação, análise energética e tomada de decisão inteligente em uma colônia espacial simulada em Marte.
 
 O sistema integra monitoramento energético, previsão de geração eólica, controle inteligente dos módulos da colônia e análise automática de risco operacional.
 
+---
 
-Visão Geral
+# Visão Geral
 
 A proposta do projeto é representar o funcionamento de uma colônia autônoma em Marte, capaz de monitorar seus recursos energéticos e tomar decisões automaticamente para garantir estabilidade e sobrevivência dos módulos essenciais.
 
@@ -20,10 +22,11 @@ Durante a execução, o sistema realiza:
 
 O projeto foi estruturado utilizando conceitos fundamentais de programação, organização hierárquica de dados e modelagem preditiva.
 
+---
 
-Principais Funcionalidades
+# Principais Funcionalidades
 
-Gerenciamento Energético Inteligente
+## Gerenciamento Energético Inteligente
 
 O sistema compara automaticamente:
 
@@ -39,8 +42,9 @@ Exemplo:
 * laboratório científico pode entrar em modo OFF;
 * suporte à vida permanece ativo como prioridade máxima.
 
+---
 
-Previsão de Energia Eólica
+## Previsão de Energia Eólica
 
 Utilizando regressão linear com Scikit-Learn, o sistema estima a geração futura de energia baseada na velocidade atual do vento.
 
@@ -52,20 +56,90 @@ Exemplo:
 | 12 km/h     | 30 kW            |
 | 16 km/h     | 40 kW            |
 
-Visualização Gráfica
+---
+
+# Relatórios Inteligentes do Sistema
+
+O sistema gera tabelas organizadas automaticamente utilizando a biblioteca Tabulate.
+
+## Relatório Geral da Colônia
+
+Exemplo:
+
+```text
+╒══════════════════════════╤══════════╤══════════╤══════════════════════════╕
+│ Sistema                 │ Status   │ Valor    │ Indicador Operacional   │
+╞══════════════════════════╪══════════╪══════════╪══════════════════════════╡
+│ Energia solar           │ ON       │ 35       │ Geração solar           │
+│ Bateria                 │ ON       │ 60       │ 25%                     │
+│ Vento atual             │ ON       │ 12       │ km/h                    │
+│ Suporte de vida         │ ON       │ 20       │ 72%                     │
+│ Laboratório científico  │ ON       │ 18       │ 1                       │
+│ Alojamento              │ ON       │ 10       │ 85%                     │
+╘══════════════════════════╧══════════╧══════════╧══════════════════════════╛
+````
+
+---
+
+## Tabela de Dados Energéticos
+
+O sistema também exibe relatórios completos da geração e consumo energético da colônia.
+
+Exemplo:
+
+```text
+╒══════════════════════════╤══════════════╕
+│ Descrição               │ Valor        │
+╞══════════════════════════╪══════════════╡
+│ Geração eólica          │ 30.00 kW     │
+│ Geração solar           │ 35.00 kW     │
+│ Energia da bateria      │ 15.00 kW     │
+│ Energia total disponível│ 80.00 kW     │
+│ Consumo total módulos   │ 48.00 kW     │
+╘══════════════════════════╧══════════════╛
+```
+
+---
+
+## Histórico Climático e Energético
+
+O sistema exibe tabelas contendo o histórico do vento e da geração de energia da colônia.
+
+Exemplo:
+
+```text
+╒══════════╤══════════╤══════════╤══════════╤══════════╕
+│ Vento 1  │ Vento 2  │ Vento 3  │ Vento 4  │ Vento 5  │
+╞══════════╪══════════╪══════════╪══════════╪══════════╡
+│ 8.0      │ 10.0     │ 12.0     │ 14.0     │ 16.0     │
+╘══════════╧══════════╧══════════╧══════════╧══════════╛
+```
+
+---
+
+# Visualização Gráfica
 
 O projeto utiliza gráficos personalizados com Matplotlib para representar:
 
 * produção energética;
 * previsão eólica;
 * níveis de bateria;
-* comportamento energético da colônia.
+* comportamento energético da colônia;
+* análise preditiva da geração eólica.
 
-Os gráficos possuem identidade visual inspirada em sistemas futuristas e monitoramento espacial.
+Os gráficos possuem identidade visual futurista inspirada em sistemas espaciais e monitoramento inteligente de Marte.
 
+O sistema também utiliza:
 
+* fundo gráfico temático;
+* visual escuro futurista;
+* pontos históricos de energia;
+* linha de regressão linear;
+* previsão automática da geração energética.
 
-Organização Hierárquica de Dados
+---
+
+# Organização Hierárquica de Dados
 
 A estrutura da colônia foi organizada utilizando:
 
@@ -93,17 +167,25 @@ estado_colonia = {
 Projeto-FIAP-Colonia-Aurora/
 │
 ├── main.py
-├── balanceamento_energetico.py
-├── banco_dados_projeto.py
-├── regressao.py
-├── grafico_previsão_eolica.py
-├── tabela_relatorio_sistema.py
-│
 ├── README.md
-└── requirements.txt
+├── requirements.txt
+├── .gitignore
+│
+├── src/
+│   ├── __init__.py
+│   ├── banco_dados_projeto.py
+│   ├── tabela_relatorio_sistema.py
+│   ├── balanceamento_energetico.py
+│   ├── regressao.py
+│   └── grafico_previsão_eolica.py
+│
+├── assets/
+│   └── image.png
 ```
 
-Tecnologias Utilizadas
+---
+
+# Tecnologias Utilizadas
 
 * Python
 * Matplotlib
@@ -113,9 +195,9 @@ Tecnologias Utilizadas
 
 ---
 
-Execução do Projeto
+# Execução do Projeto
 
-Clonar o Repositório
+## Clonar o Repositório
 
 ```bash
 git clone https://github.com/PedroGesini/Projeto-FIAP---A-Aurora-Estabelece-os-Primeiros-Sistemas-da-Col-nia.git
@@ -123,20 +205,23 @@ git clone https://github.com/PedroGesini/Projeto-FIAP---A-Aurora-Estabelece-os-P
 
 ---
 
-Entrar na Pasta do Projeto
+## Entrar na Pasta do Projeto
 
 ```bash
 cd Projeto-FIAP---A-Aurora-Estabelece-os-Primeiros-Sistemas-da-Col-nia
 ```
 
+---
 
-Instalar as Dependências
+## Instalar as Dependências
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Executar o Sistema
+---
+
+## Executar o Sistema
 
 ```bash
 python main.py
@@ -144,18 +229,18 @@ python main.py
 
 ---
 
-Simulação do Sistema
+# Simulação do Sistema
 
-Cenário Energético
+## Cenário Energético
 
-Entrada
+### Entrada
 
 ```python
 Energia Total = 40 kW
 Consumo Total = 70 kW
 ```
 
-Resultado
+### Resultado
 
 ```python
 ALERTA ENERGÉTICO
@@ -167,7 +252,7 @@ Consumo superior à geração disponível.
 
 ---
 
-Objetivos do Projeto
+# Objetivos do Projeto
 
 Este projeto foi desenvolvido com o objetivo de:
 
@@ -178,8 +263,9 @@ Este projeto foi desenvolvido com o objetivo de:
 * implementar modelagem preditiva;
 * simular ambientes inteligentes e autônomos.
 
+---
 
-Desenvolvimento
+# Desenvolvimento
 
 Projeto desenvolvido como atividade acadêmica da FIAP, integrando conceitos de:
 
@@ -189,7 +275,11 @@ Projeto desenvolvido como atividade acadêmica da FIAP, integrando conceitos de:
 * inteligência computacional;
 * sistemas inteligentes.
 
+---
 
-Licença
+# Licença
 
 Projeto desenvolvido para fins acadêmicos e educacionais.
+
+```
+```
