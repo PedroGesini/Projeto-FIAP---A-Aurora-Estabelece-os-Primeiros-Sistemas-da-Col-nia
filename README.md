@@ -168,7 +168,6 @@ estado_colonia = {
 │
 ├── 📄 main.py
 ├── 📄 README.md
-├── 📄 requirements.txt
 ├── 📄 .gitignore
 │
 ├── 📁 src
