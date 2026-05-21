@@ -15,7 +15,7 @@ def criar_grafico_previsao(
 
     # Carregar imagem
     imagem_fundo = mpimg.imread(
-        "Gemini_Generated_Image_f9qxoof9qxoof9qx(1).jpg"
+        "image.png"
     )
 
     # Criar gráfico
@@ -31,7 +31,7 @@ def criar_grafico_previsao(
             max(historico_eolica) + 10
         ],
         aspect="auto",
-        alpha=0.85
+        alpha=0.95
     )
 
     # Criando linha contínua da regressão
@@ -131,7 +131,7 @@ def criar_grafico_previsao(
     # Legenda
     legenda = ax.legend(
         facecolor="black",
-        edgecolor="white"
+        edgecolor="black"
     )
 
     for texto in legenda.get_texts():

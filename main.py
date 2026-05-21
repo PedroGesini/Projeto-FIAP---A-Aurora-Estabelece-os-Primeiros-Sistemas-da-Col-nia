@@ -1,4 +1,3 @@
-import random
 from tabulate import tabulate
 import balanceamento_energetico as be
 import grafico_previsão_eolica as gpe
@@ -6,34 +5,7 @@ import banco_dados_projeto as bd
 from regressao import prever_energia_eolica
 
 #variaveis da colonia
-estado_colonia = {
-    "energia_clima": {
-        "geracao_solar_kw": random.randint(10, 40),
-        "capacidade_bateria_kwh": random.randint(30, 80),
-        "nivel_bateria_pct": random.randint(10, 30),
-        "vento_atual_kmh": random.randint(6, 12),
-        "historico_vento": [8.0, 10.0, 12.0, 14.0, 16.0],
-        "historico_eolica": [20.0, 25.0, 30.0, 35.0, 40.0],
-    },
-
-    "suporte_vida": {
-        "status": "ON",
-        "consumo_kw": random.randint(15, 25),
-        "recursos_vitais_pct": random.randint(65, 75),
-    },
-
-    "laboratorio_cientifico": {
-        "status": "ON",
-        "consumo_kw": random.randint(15, 20),
-        "experimento_critico": random.randint(0,1),
-    },
-
-    "alojamento": {
-        "status": "ON",
-        "consumo_kw": random.randint(1, 15),
-        "taxa_conforto_pct": random.randint(50, 100),
-    },
-}
+estado_colonia = bd.variaveis_colonia()
 
 while True:
     #calculo da geração eolica
@@ -61,7 +33,6 @@ while True:
             "0 - Encerrar sistema\n\n"
             "DIGITE A OPÇÃO: "
         ))
-
     except ValueError:
         print("\n Opção inválida")
         continue
@@ -94,11 +65,28 @@ while True:
             historico_vento = estado_colonia["energia_clima"]["historico_vento"]
             historico_eolica = estado_colonia["energia_clima"]["historico_eolica"]
             vento_atual = estado_colonia["energia_clima"]["vento_atual_kmh"]
+            dados_previsao = [
+                ["Histórico do vento", historico_vento],
+                ["Histórico eólico", historico_eolica],
+                ["Vento atual", f"{vento_atual} km/h"]
+            ]
+            historico_vento = estado_colonia["energia_clima"]["historico_vento"]
+
+            dados_vento = [
+                historico_vento
+            ]
+            print("\n--- HISTORICO DO VENTO ---")
+            print(tabulate(
+                dados_vento,
+                headers=[
+                    "Verficação 1","Verficação 2","Verficação 3","Verficação 4","Verficação 5"
+                ],
+                tablefmt="fancy_grid"
+            ))
 
             print("\n--- PREVISÃO DE ENERGIA EÓLICA ---")
             print(f"Vento atual: {vento_atual} km/h")
             print(f"Previsão estimada de energia eólica: {previsao:.2f} kW")
-
             input("\nPressione ENTER para exibir o gráfico:")
 
             gpe.criar_grafico_previsao(historico_vento,historico_eolica,vento_atual,previsao) #grafico_previsão_eolica.py
