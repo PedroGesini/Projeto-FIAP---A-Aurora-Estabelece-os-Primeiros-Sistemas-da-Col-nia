@@ -1,9 +1,44 @@
 from tabulate import tabulate
-import balanceamento_energetico as be
-import grafico_previsão_eolica as gpe
-import banco_dados_projeto as bd
-from regressao import prever_energia_eolica
+from src import regressao as rg
+from src import banco_dados_projeto as bd
+from src import balanceamento_energetico as be
+from src import grafico_previsão_eolica as gpe
+#cria tabela mostrando o relatorio do sistema da colonia
+def tabela_relatorio_sistema(
+        estado_colonia,
+        geracao_eolica,
+        geracao_solar,
+        energia_bateria,
+        energia_total,
+        consumo_total
+):
 
+    bc.banco_dados(estado_colonia)
+
+    dados_energia = [
+
+        ["Geração eólica", f"{geracao_eolica:.2f} kW"],
+        ["Geração solar", f"{geracao_solar:.2f} kW"],
+        ["Energia da bateria", f"{energia_bateria:.2f} kW"],
+        ["Energia total disponível", f"{energia_total:.2f} kW"],
+        ["Consumo total dos módulos", f"{consumo_total:.2f} kW"],
+    ]
+
+    print("\n------| DADOS DE ENERGIA |------\n")
+
+    print(tabulate(
+        dados_energia,
+        headers=["Sistema", "Valor"],
+        tablefmt="fancy_grid"
+    ))
+
+    be.balanceamento_energetico(
+        estado_colonia,
+        energia_total,
+        consumo_total
+    )
+
+    input("\nPressione ENTER para voltar ao menu:")
 #variaveis da colonia
 estado_colonia = bd.variaveis_colonia()
 
@@ -60,7 +95,7 @@ while True:
 
             be.balanceamento_energetico(estado_colonia,energia_total,consumo_total) #balanceamento_energetico.py
         case 3:
-            previsao = prever_energia_eolica(estado_colonia) #regressão.py
+            previsao = rg.prever_energia_eolica(estado_colonia) #regressão.py
 
             historico_vento = estado_colonia["energia_clima"]["historico_vento"]
             historico_eolica = estado_colonia["energia_clima"]["historico_eolica"]

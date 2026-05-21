@@ -15,7 +15,7 @@ def criar_grafico_previsao(
 
     # Carregar imagem
     imagem_fundo = mpimg.imread(
-        "image.png"
+        "assets/image.png"
     )
 
     # Criar gráfico
