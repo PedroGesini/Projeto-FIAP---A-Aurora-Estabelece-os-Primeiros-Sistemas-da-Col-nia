@@ -164,23 +164,23 @@ estado_colonia = {
 # Estrutura do Projeto
 
 ```bash
-Projeto-FIAP-Colonia-Aurora/
+📁 Projeto-FIAP-Colonia-Aurora
 │
-├── main.py
-├── README.md
-├── requirements.txt
-├── .gitignore
+├── 📄 main.py
+├── 📄 README.md
+├── 📄 requirements.txt
+├── 📄 .gitignore
 │
-├── src/
-│   ├── __init__.py
-│   ├── banco_dados_projeto.py
-│   ├── tabela_relatorio_sistema.py
-│   ├── balanceamento_energetico.py
-│   ├── regressao.py
-│   └── grafico_previsão_eolica.py
+├── 📁 src
+│   ├── 📄 __init__.py
+│   ├── 📄 banco_dados_projeto.py
+│   ├── 📄 tabela_relatorio_sistema.py
+│   ├── 📄 balanceamento_energetico.py
+│   ├── 📄 regressao.py
+│   └── 📄 grafico_previsão_eolica.py
 │
-├── assets/
-│   └── image.png
+├── 📁 assets
+│   └── 🖼️ image.png
 ```
 
 ---
