@@ -1,9 +1,8 @@
 from tabulate import tabulate
-import src.balanceamento_energetico as be
-from src import banco_dados_projeto as bc
-from src import regressao
-from src import banco_dados_projeto
-#cria tabela mostrando o relatorio do sistema da colonia
+from src import balanceamento_energetico as be
+from src import banco_dados_projeto as bd
+
+# cria tabela mostrando o relatorio do sistema da colonia
 def tabela_relatorio_sistema(
         estado_colonia,
         geracao_eolica,
@@ -13,46 +12,9 @@ def tabela_relatorio_sistema(
         consumo_total
 ):
 
-    bc.banco_dados(estado_colonia)
+    bd.banco_dados(estado_colonia)
 
     dados_energia = [
-
-        ["Geração eólica", f"{geracao_eolica:.2f} kW"],
-        ["Geração solar", f"{geracao_solar:.2f} kW"],
-        ["Energia da bateria", f"{energia_bateria:.2f} kW"],
-        ["Energia total disponível", f"{energia_total:.2f} kW"],
-        ["Consumo total dos módulos", f"{consumo_total:.2f} kW"],
-    ]
-
-    print("\n------| DADOS DE ENERGIA |------\n")
-
-    print(tabulate(
-        dados_energia,
-        headers=["Sistema", "Valor"],
-        tablefmt="fancy_grid"
-    ))
-
-    be.balanceamento_energetico(
-        estado_colonia,
-        energia_total,
-        consumo_total
-    )
-
-    input("\nPressione ENTER para voltar ao menu:")
-#cria tabela mostrando o relatorio do sistema da colonia
-def tabela_relatorio_sistema(
-        estado_colonia,
-        geracao_eolica,
-        geracao_solar,
-        energia_bateria,
-        energia_total,
-        consumo_total
-):
-
-    bc.banco_dados(estado_colonia)
-
-    dados_energia = [
-
         ["Geração eólica", f"{geracao_eolica:.2f} kW"],
         ["Geração solar", f"{geracao_solar:.2f} kW"],
         ["Energia da bateria", f"{energia_bateria:.2f} kW"],
