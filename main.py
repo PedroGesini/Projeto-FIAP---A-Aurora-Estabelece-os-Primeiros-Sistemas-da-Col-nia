@@ -13,7 +13,7 @@ def tabela_relatorio_sistema(
         consumo_total
 ):
 
-    bc.banco_dados(estado_colonia)
+    bd.banco_dados(estado_colonia)
 
     dados_energia = [
 
