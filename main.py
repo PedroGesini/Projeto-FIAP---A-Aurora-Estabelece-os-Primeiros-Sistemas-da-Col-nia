@@ -2,43 +2,8 @@ from tabulate import tabulate
 from src import regressao as rg
 from src import banco_dados_projeto as bd
 from src import balanceamento_energetico as be
-from src import grafico_previsão_eolica as gpe
-#cria tabela mostrando o relatorio do sistema da colonia
-def tabela_relatorio_sistema(
-        estado_colonia,
-        geracao_eolica,
-        geracao_solar,
-        energia_bateria,
-        energia_total,
-        consumo_total
-):
+from src import grafico_previsao_eolica as gpe
 
-    bc.banco_dados(estado_colonia)
-
-    dados_energia = [
-
-        ["Geração eólica", f"{geracao_eolica:.2f} kW"],
-        ["Geração solar", f"{geracao_solar:.2f} kW"],
-        ["Energia da bateria", f"{energia_bateria:.2f} kW"],
-        ["Energia total disponível", f"{energia_total:.2f} kW"],
-        ["Consumo total dos módulos", f"{consumo_total:.2f} kW"],
-    ]
-
-    print("\n------| DADOS DE ENERGIA |------\n")
-
-    print(tabulate(
-        dados_energia,
-        headers=["Sistema", "Valor"],
-        tablefmt="fancy_grid"
-    ))
-
-    be.balanceamento_energetico(
-        estado_colonia,
-        energia_total,
-        consumo_total
-    )
-
-    input("\nPressione ENTER para voltar ao menu:")
 #variaveis da colonia
 estado_colonia = bd.variaveis_colonia()
 
@@ -53,11 +18,17 @@ while True:
     energia_bateria = capacidade_bateria * (bateria / 100)
     energia_total = geracao_eolica + geracao_solar + energia_bateria
 
-    consumo_total = (
-        estado_colonia["suporte_vida"]["consumo_kw"]
-        + estado_colonia["laboratorio_cientifico"]["consumo_kw"]
-        + estado_colonia["alojamento"]["consumo_kw"]
-    )
+    # Cálculo inteligente do consumo (só soma se estiver ON)
+    consumo_total = 0
+
+    if estado_colonia["suporte_vida"]["status"] == "ON":
+        consumo_total += estado_colonia["suporte_vida"]["consumo_kw"]
+
+    if estado_colonia["laboratorio_cientifico"]["status"] == "ON":
+        consumo_total += estado_colonia["laboratorio_cientifico"]["consumo_kw"]
+
+    if estado_colonia["alojamento"]["status"] == "ON":
+        consumo_total += estado_colonia["alojamento"]["consumo_kw"]
     #escolha do usuario
     try:
         opcao = int(input(
