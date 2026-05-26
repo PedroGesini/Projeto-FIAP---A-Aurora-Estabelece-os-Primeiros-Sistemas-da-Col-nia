@@ -1,13 +1,13 @@
 ````markdown
-# Sistema Inteligente da Colônia Aurora
+ Sistema Inteligente da Colônia Aurora
 
 Projeto acadêmico desenvolvido em Python com foco em automação, análise energética e tomada de decisão inteligente em uma colônia espacial simulada em Marte.
 
 O sistema integra monitoramento energético, previsão de geração eólica, controle inteligente dos módulos da colônia e análise automática de risco operacional.
 
----
 
-# Visão Geral
+
+ Visão Geral
 
 A proposta do projeto é representar o funcionamento de uma colônia autônoma em Marte, capaz de monitorar seus recursos energéticos e tomar decisões automaticamente para garantir estabilidade e sobrevivência dos módulos essenciais.
 
@@ -22,11 +22,11 @@ Durante a execução, o sistema realiza:
 
 O projeto foi estruturado utilizando conceitos fundamentais de programação, organização hierárquica de dados e modelagem preditiva.
 
----
 
-# Principais Funcionalidades
 
-## Gerenciamento Energético Inteligente
+ Principais Funcionalidades
+
+ Gerenciamento Energético Inteligente
 
 O sistema compara automaticamente:
 
@@ -42,9 +42,8 @@ Exemplo:
 * laboratório científico pode entrar em modo OFF;
 * suporte à vida permanece ativo como prioridade máxima.
 
----
 
-## Previsão de Energia Eólica
+ Previsão de Energia Eólica
 
 Utilizando regressão linear com Scikit-Learn, o sistema estima a geração futura de energia baseada na velocidade atual do vento.
 
@@ -56,13 +55,13 @@ Exemplo:
 | 12 km/h     | 30 kW            |
 | 16 km/h     | 40 kW            |
 
----
 
-# Relatórios Inteligentes do Sistema
+
+Relatórios Inteligentes do Sistema
 
 O sistema gera tabelas organizadas automaticamente utilizando a biblioteca Tabulate.
 
-## Relatório Geral da Colônia
+Relatório Geral da Colônia
 
 Exemplo:
 
@@ -79,9 +78,8 @@ Exemplo:
 ╘══════════════════════════╧══════════╧══════════╧══════════════════════════╛
 ````
 
----
 
-## Tabela de Dados Energéticos
+ Tabela de Dados Energéticos
 
 O sistema também exibe relatórios completos da geração e consumo energético da colônia.
 
@@ -99,9 +97,9 @@ Exemplo:
 ╘══════════════════════════╧══════════════╛
 ```
 
----
 
-## Histórico Climático e Energético
+
+ Histórico Climático e Energético
 
 O sistema exibe tabelas contendo o histórico do vento e da geração de energia da colônia.
 
@@ -115,9 +113,8 @@ Exemplo:
 ╘══════════╧══════════╧══════════╧══════════╧══════════╛
 ```
 
----
 
-# Visualização Gráfica
+Visualização Gráfica
 
 O projeto utiliza gráficos personalizados com Matplotlib para representar:
 
@@ -137,9 +134,8 @@ O sistema também utiliza:
 * linha de regressão linear;
 * previsão automática da geração energética.
 
----
 
-# Organização Hierárquica de Dados
+ Organização Hierárquica de Dados
 
 A estrutura da colônia foi organizada utilizando:
 
@@ -159,9 +155,7 @@ estado_colonia = {
 }
 ```
 
----
-
-# Estrutura do Projeto
+Estrutura do Projeto
 
 ```bash
 📁 Projeto-FIAP-Colonia-Aurora
@@ -182,9 +176,8 @@ estado_colonia = {
 │   └── 🖼️ image.png
 ```
 
----
 
-# Tecnologias Utilizadas
+Tecnologias Utilizadas
 
 * Python
 * Matplotlib
@@ -192,9 +185,9 @@ estado_colonia = {
 * Scikit-Learn
 * Tabulate
 
----
 
-# Execução do Projeto
+
+ Execução do Projeto
 
 ## Clonar o Repositório
 
@@ -226,20 +219,19 @@ pip install -r requirements.txt
 python main.py
 ```
 
----
 
-# Simulação do Sistema
+Simulação do Sistema
 
-## Cenário Energético
+ Cenário Energético
 
-### Entrada
+ Entrada
 
 ```python
 Energia Total = 40 kW
 Consumo Total = 70 kW
 ```
 
-### Resultado
+Resultado
 
 ```python
 ALERTA ENERGÉTICO
@@ -251,7 +243,7 @@ Consumo superior à geração disponível.
 
 ---
 
-# Objetivos do Projeto
+Objetivos do Projeto
 
 Este projeto foi desenvolvido com o objetivo de:
 
@@ -262,9 +254,8 @@ Este projeto foi desenvolvido com o objetivo de:
 * implementar modelagem preditiva;
 * simular ambientes inteligentes e autônomos.
 
----
 
-# Desenvolvimento
+Desenvolvimento
 
 Projeto desenvolvido como atividade acadêmica da FIAP, integrando conceitos de:
 
@@ -274,11 +265,9 @@ Projeto desenvolvido como atividade acadêmica da FIAP, integrando conceitos de:
 * inteligência computacional;
 * sistemas inteligentes.
 
----
 
-# Licença
+Licença
 
 Projeto desenvolvido para fins acadêmicos e educacionais.
 
-```
-```
+
