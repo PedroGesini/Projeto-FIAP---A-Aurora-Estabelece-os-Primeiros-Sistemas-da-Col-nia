@@ -159,20 +159,22 @@ Estrutura do Projeto
 ```bash
 📁 Projeto-FIAP-Colonia-Aurora
 │
-├── 📄 main.py
-├── 📄 README.md
-├── 📄 .gitignore
-│
-├── 📁 src
-│   ├── 📄 __init__.py
-│   ├── 📄 banco_dados_projeto.py
-│   ├── 📄 tabela_relatorio_sistema.py
-│   ├── 📄 balanceamento_energetico.py
-│   ├── 📄 regressao.py
-│   └── 📄 grafico_previsão_eolica.py
-│
 ├── 📁 assets
 │   └── 🖼️ image.png
+│
+├── 📁 src
+│   ├── 📄 **init**.py
+│   ├── 📄 balanceamento_energetico.py
+│   ├── 📄 banco_dados_projeto.py
+│   ├── 📄 grafico_previsao_eolica.py
+│   ├── 📄 regressao.py
+│   └── 📄 tabela_relatorio_sistema.py
+│
+├── 📄 .gitignore
+├── 📄 README.md
+├── 📄 main.py
+└── 📄 requirements.txt
+
 ```
 
 
